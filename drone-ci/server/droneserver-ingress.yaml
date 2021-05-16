@@ -2,14 +2,14 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: drone-server
-  annotations:
-    kubernetes.io/ingress.class: "traefik"
-    traefik.ingress.kubernetes.io/frontend-entry-points: http,https
-    traefik.ingress.kubernetes.io/redirect-entry-point: https
-    traefik.ingress.kubernetes.io/redirect-permanent: "true"
+  # annotations:
+  #   kubernetes.io/ingress.class: "nginx"
+  #   traefik.ingress.kubernetes.io/frontend-entry-points: http,https
+  #   traefik.ingress.kubernetes.io/redirect-entry-point: https
+  #   traefik.ingress.kubernetes.io/redirect-permanent: "true"
 spec:
   rules:
-  - host: drone.marceldempers.dev
+  - host: drone.avo.dev
     http:
       paths:
       - backend:
